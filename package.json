@@ -1,0 +1,15 @@
+{
+  "name": "backend-in-4-hours",
+  "version": "1.0.0",
+  "description": "learning backend in 4 hours from Sheryians",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Harshit Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

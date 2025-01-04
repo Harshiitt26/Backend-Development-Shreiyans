@@ -1,0 +1,5 @@
+// 1 - dependencies are present in folder form in the node_modules folder
+// 2 - To run a file in terminal use command "node index.js" the will run in the terminal & print the console
+// 3 - localhost:6000 does not work
+// 4 - (node app.js) is correct, (npm run start) where "start"="node app.js" is correct, (npm run node app.js) is in correct
+// 5 - npx VS npm  NPM install the packages grobally and manage dependencies while NPX runs packages without installing globally.
