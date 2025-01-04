@@ -1,17 +1,25 @@
-// creating a server using http , (without using express)
-const http = require("http") // http is pre-installed in the node_modules folder
-const server = http.createServer((req,res)=>{
-    // console.log(req.url); // req.url the route hitted
-    if(req.url == "/"){
-        res.end("Hello World.")
-    }
-    if(req.url == "/about"){
-        res.end("Welcome to About page.")
-    }
-    if(req.url == "/profile"){
-        res.end("Welcome to profile page.")
-    }
+const express = require("express")
+const app = express()
+
+app.set("view engine","ejs") //ejs is a view engine used to render a html file using express
+
+// Middlewares are of 3 types - Built-in, custom, 3rd-party
+// Custom MiddleWare
+app.use((req,res,next)=>{
+    console.log("This is a common middleware for each route")
+    let arr = ["apple","mango","tomato"]
+    console.log(arr[2])
+    next()
 })
-server.listen(5000,()=>{
-    console.log("Server started")
+// 3rd-party Middleware morgan
+const morgan = require("morgan")
+app.use(morgan("dev"))
+
+app.get(("/"),(req,res)=>{
+    res.send("Hello World...")
 })
+app.get(("/author"),(req,res)=>{
+    res.render("index")
+})
+
+app.listen(3000)

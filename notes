@@ -3,3 +3,5 @@
 // 3 - localhost:6000 does not work
 // 4 - (node app.js) is correct, (npm run start) where "start"="node app.js" is correct, (npm run node app.js) is in correct
 // 5 - npx VS npm  NPM install the packages grobally and manage dependencies while NPX runs packages without installing globally.
+// 6 - "start"="node app.js" VS "start"="nodemon app.js"
+// 7 - To render a page like html with the help of express we require a vue engines - we will use ejs
