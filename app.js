@@ -21,5 +21,18 @@ app.get(("/"),(req,res)=>{
 app.get(("/author"),(req,res)=>{
     res.render("index")
 })
+app.get(("/form"),(req,res)=>{
+    res.render("form")
+})
+// GET method is used for sending data from server to frontend
+// POST method is used for sending data from frontend to server
+app.use(express.json())
+app.use(express.urlencoded({ extended: true}))
+app.use(express.static("public")) // used for showing css file in public folder for frontend
+
+app.post(("/get-form-data"),(req,res)=>{
+    console.log(req.body)
+    res.send("Thank you for filling the form")
+})
 
 app.listen(3000)

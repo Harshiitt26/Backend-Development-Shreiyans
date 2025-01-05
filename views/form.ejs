@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/form.css">
+<body>
+    <form action="/get-form-data" method="post">
+        <div>
+        <label for="name">Name: </label>
+        <input type="text" placeholder="Enter name" name="username" id="name">
+        </div>
+        <!-- for and id must be same,name attribute in input must be filled so that data is shown in backend -->
+        <div>
+        <label for="email">Email: </label>
+        <input type="email" placeholder="Enter email" name="email" id="email">
+        </div>
+        <div>
+        <label for="password">Password: </label>
+        <input type="password" placeholder="Enter password" name="password" id="password">
+        </div>
+        <button>Submit</button>
+    </form>
+    <script src="/form.js"></script>
+</body>
+</html>
