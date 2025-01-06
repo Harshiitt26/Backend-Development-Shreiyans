@@ -53,8 +53,25 @@ app.post(("/register"), async (req,res)=>{
         email: email,
         password: password,
     })
-
     res.send(newUser)
+})
+app.get(("/get-user-data"),(req,res)=>{
+    // userModel.findOne({}).then(()=>{})
+    userModel.find({}).then((users)=>{
+        res.send(users)
+    })
+})
+app.get(("/update-data"), async (req,res)=>{
+    await userModel.findOneAndUpdate({
+        username: "harshit Kumar"
+    },{ username: "harshit"})
+    res.send("user updated")
+})
+app.get(("/delete-data"), async (req,res)=>{
+    await userModel.findOneAndDelete({
+        email : "1@1"
+    })
+    res.send("user deleted")
 })
 
 app.listen(process.env.PORT)
